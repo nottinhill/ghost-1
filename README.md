@@ -1,7 +1,8 @@
 # <img src="https://cloud.githubusercontent.com/assets/120485/18661790/cf942eda-7f17-11e6-9eb6-9c65bfc2abd8.png" alt="Ghost" />
 
 This repo demonstrates deployment of the [Ghost blogging
-software](https://ghost.org/) using Node.js and Now.
+software](https://ghost.org/) to [Now](https://now.sh), [using Ghost as
+an npm module](https://docs.ghost.org/docs/using-ghost-as-an-npm-module).
 
 ## How to deploy
 
