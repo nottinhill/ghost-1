@@ -1,10 +1,9 @@
 /**
- * This example server code from the `TryGhost/ghost` wiki page
- * "Using Ghost as an npm module": https://git.io/v1p4C
+ * This example server code comes from the "Using Ghost as an npm module"
+ * documentation page: https://docs.ghost.org/docs/using-ghost-as-an-npm-module
  */
-const path = require('path')
 const ghost = require('ghost')
 
-ghost({
-  config: path.join(__dirname, 'config.js')
-}).then((ghostServer) => ghostServer.start())
+ghost().then(ghostServer => {
+  ghostServer.start()
+})
