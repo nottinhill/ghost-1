@@ -1,53 +1,69 @@
-# <img src="https://cloud.githubusercontent.com/assets/120485/18661790/cf942eda-7f17-11e6-9eb6-9c65bfc2abd8.png" alt="Ghost" />
+<a href="https://github.com/TryGhost/Ghost"><img src="https://cloud.githubusercontent.com/assets/120485/18661790/cf942eda-7f17-11e6-9eb6-9c65bfc2abd8.png" alt="Ghost" /></a>
+<a href="https://travis-ci.org/TryGhost/Ghost"><img align="right" src="https://travis-ci.org/TryGhost/Ghost.svg?branch=master" alt="Build status" /></a>
 
-This repo demonstrates deployment of the [Ghost blogging
-software](https://ghost.org/) to [Now](https://now.sh), [using Ghost as
-an npm module](https://docs.ghost.org/docs/using-ghost-as-an-npm-module).
+The project is maintained by a non-profit organisation called the **Ghost Foundation**, along with an amazing group of independent [contributors](https://github.com/TryGhost/Ghost/contributors). We're trying to make publishing software that changes the shape of online journalism.
 
-## How to deploy
+- [Ghost.org](https://ghost.org)
+- [Supported Node Versions](https://docs.ghost.org/v1/docs/supported-node-versions)
+- [Latest Release](https://ghost.org/developers/)
+- [Help & Support](http://help.ghost.org/)
+- [Theme Docs](http://themes.ghost.org/v1/)
+- [API Docs](https://api.ghost.org/)
+- [Contributing Guide](https://docs.ghost.org/v1/docs/contributing)
+- [Developer Blog](http://dev.ghost.org)
+- [Self-hoster Docs](http://docs.ghost.org/v1/)
 
-First, [download `now`](https://zeit.co/download). Then, clone this
-repository and run `now`:
+**NOTE: If you’re stuck, can’t get something working or need some help, please head on over and join our [forum](https://forum.ghost.org/) rather than opening an issue.**
 
-```bash
-$ git clone git://github.com/now-examples/ghost
-$ cd ghost
-$ npm install
-$ NODE_ENV=development npm start
-# make changes to your Ghost database locally before deploying
-$ now
-```
+&nbsp;
 
-> Example: https://now-examples-ghost.now.sh/
+![Ghost](https://user-images.githubusercontent.com/120485/28764244-344050c0-75d5-11e7-9314-45bc4177164e.png)
 
-You can tweak the `config.js` file and `content` directory to your liking, and
-then re-deploy by running `now` again.
+&nbsp;
 
-### A note on Ghost database engines with Now
+# Hosting a live Ghost site
 
-#### `sqlite3`
+<a href="https://ghost.org/pricing"><img src="https://cloud.githubusercontent.com/assets/120485/18662071/f30da886-7f18-11e6-90f2-42c0ade79fd1.png" alt="Ghost(Pro)" /></a>
 
-The file system on Now deployments is immutable. So knowing this, if you're
-going to stick with the default `sqlite3` backend (which is file system
-based) then you should follow the typical Now-deployment paradigm. That is:
+The easiest way to deploy Ghost is with our official **[Ghost(Pro)](https://ghost.org/pricing/)** managed service. You can have a fresh instance up and running in a couple of clicks with a worldwide CDN, backups, security and maintenance all done for you.
 
- * Start Ghost up locally in development mode: `NODE_ENV=development npm start`
- * Write a blog post and publish it so that the local sqlite database is updated
- * Create a new Now deployment and re-alias your URL
+Not only will it save you hours of maintenance per month, but all revenue goes to the Ghost Foundation, which funds the maintenance and further development of Ghost itself. So you’ll be supporting open source software *and* getting a great service **at the same time**! Talk about win/win. :trophy:
 
-This paradigm requires a new deployment for _any_ new blog posts or changes,
-and when upgrading Ghost.
+## Self-Hosters
 
-#### `mysql` and `postgres`
+Other options are also available if you prefer playing around with servers by yourself, of course. The freedom of choice is in your hands.
 
-If you want to use a `mysql` or `postgres` database service, then you'll have
-to update the `config.js` file to point to an externally hosted database.
-If you go this route then your Now deployment is more "live" such that you can
-edit and publish posts without creating a new Now deployment, so the workflow
-looks more like:
+- [Self-hosting Guide](https://docs.ghost.org/v1/docs/getting-started-guide)
 
- * Edit the `config.js` file to point to your database server
- * Create a Now deployment and re-alias your URL
- * At this point you can go to the admin panel on your Now deploment URL and make desired changes
 
-This paradigm requires a new deployment only when upgrading Ghost, or tweaking database settings.
+# Theme Developers
+
+If you are developing a Ghost theme for your own site or creating themes for others to use we recommend installing Ghost on your own local machine. Luckily we have a brand new Ghost CLI to make this really easy 😄
+
+- [Installing Ghost via the CLI](https://docs.ghost.org/v1/docs/install-local)
+- [Theme Developer Docs](http://themes.ghost.org)
+
+
+# Contributors & Advanced Developers
+
+For anyone wishing to contribute to Ghost or to hack/customise core files we recommend following our development setup guides:
+
+- [General Contributor Guide](https://docs.ghost.org/v1/docs/contributing)
+- [Developer Setup Instructions](https://docs.ghost.org/v1/docs/working-with-ghost)
+- [Admin Client development guide](https://docs.ghost.org/v1/docs/working-with-the-admin-client)
+
+
+# Staying Up to Date
+
+When a new version of Ghost comes out, you'll want to look over these [upgrade instructions](https://docs.ghost.org/v1/docs/upgrade) for what to do next.
+
+You can talk to other Ghost users and developers in our [forum](https://forum.ghost.org/) (it's pretty awesome).
+
+New releases are announced on the [dev blog](http://dev.ghost.org/tag/releases/). You can subscribe by email or follow [@TryGhost_Dev](https://twitter.com/tryghost_dev) on Twitter, if you prefer your updates bite-sized and facetious. :saxophone::turtle:
+
+&nbsp;
+
+
+# Copyright & License
+
+Copyright (c) 2013-2018 Ghost Foundation - Released under the [MIT license](LICENSE). Ghost and the Ghost Logo are trademarks of Ghost Foundation Ltd. Please see our [trademark policy](https://ghost.org/trademark/) for info on acceptable usage.

@@ -1,7 +1,11 @@
-var config = require('./node_modules/ghost/core/server/config'),
-    ghostVersion = require('./node_modules/ghost/core/server/utils/ghost-version');
+var config = require('./core/server/config'),
+    ghostVersion = require('./core/server/lib/ghost-version');
 
-require('./node_modules/ghost/core/server/overrides');
+/**
+ * knex-migrator can be used via CLI or within the application
+ * when using the CLI, we need to ensure that our global overrides are triggered
+ */
+require('./core/server/overrides');
 
 module.exports = {
     currentVersion: ghostVersion.safe,
